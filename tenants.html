@@ -13,6 +13,28 @@
       color: #003366;
       background: #f9faff;
     }
+    nav {
+      background-color: #003366;
+      padding: 10px 20px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    nav a {
+      color: #ffffff;
+      margin-right: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:last-child {
+      margin-right: 0;
+    }
+    .logo {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .logo img {
+      max-height: 120px;
+    }
     h1 {
       color: #0055aa;
     }
@@ -22,15 +44,21 @@
   </style>
 </head>
 <body>
-  <nav style="background-color:#003366; padding:10px 20px; margin-bottom:30px;">
-    <a href="index.html" style="color:#ffffff; margin-right:20px; text-decoration:none; font-weight:bold;">Home</a>
-    <a href="downloads.html" style="color:#ffffff; margin-right:20px; text-decoration:none; font-weight:bold;">Downloads</a>
-    <a href="landlords.html" style="color:#ffffff; margin-right:20px; text-decoration:none; font-weight:bold;">Landlords</a>
-    <a href="tenants.html" style="color:#ffffff; text-decoration:none; font-weight:bold;">Tenants</a>
+
+  <div class="logo">
+    <img src="logo.png" alt="Landlord and Tenant Logo" />
+  </div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="downloads.html">Downloads</a>
+    <a href="landlords.html">Landlords</a>
+    <a href="tenants.html">Tenants</a>
   </nav>
 
   <h1>Tenant Resources</h1>
   <p>Welcome tenants! This section provides advice and resources to help you understand your rights and responsibilities under tenancy agreements in England and Wales.</p>
   <p>(Content to be added...)</p>
+
 </body>
 </html>
