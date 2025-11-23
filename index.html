@@ -1,60 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Landlord and Tenant Adviser</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 700px;
-      margin: 40px auto;
-      padding: 0 20px;
-      color: #003366;
-      background: #f9faff;
+    body { margin: 0; font-family: Arial, sans-serif; }
+
+    .layout { display: flex; min-height: 100vh; }
+
+    .sidebar {
+      width: 240px;
+      background: #002b5c;
+      color: white;
+      padding: 20px;
     }
-    nav {
-      background-color: #003366;
-      padding: 10px 20px;
-      margin-bottom: 30px;
-      text-align: center;
-    }
-    nav a {
-      color: #ffffff;
-      margin-right: 20px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:last-child {
-      margin-right: 0;
-    }
-    .logo {
-      text-align: center;
+
+    .sidebar-logo {
+      width: 180px;
       margin-bottom: 20px;
     }
-    .logo img {
-      max-height: 120px;
+
+    .sidebar ul { list-style: none; padding: 0; }
+    .sidebar ul li { margin: 12px 0; }
+
+    .sidebar a {
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
     }
-    h1 {
-      color: #0055aa;
+    .sidebar a:hover { text-decoration: underline; }
+
+    .content {
+      flex: 1;
+      padding: 40px;
+      background: #f9faff;
+      color: #003366;
     }
+
+    h1 { color: #0055aa; }
   </style>
 </head>
 <body>
 
-  <div class="logo">
-    <img src="logo.png" alt="Landlord and Tenant Logo" />
-  </div>
+<div class="layout">
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="downloads.html">Downloads</a>
-    <a href="landlords.html">Landlords</a>
-    <a href="tenants.html">Tenants</a>
-  </nav>
+  <aside class="sidebar">
+    <img src="logo.png" class="sidebar-logo" alt="Logo">
+    <h2>Navigation</h2>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="landlord.html">Landlords</a></li>
+      <li><a href="tenant.html">Tenants</a></li>
+      <li><a href="downloads.html">Downloads</a></li>
+    </ul>
+  </aside>
 
-  <h1>Find out what you never knew you need to know!</h1>
-  <p>Clear help for landlords and tenants in England and Wales.</p>
+  <main class="content">
+    <h1>Find out what you never knew you needed to know!</h1>
+    <p>
+      Clear, practical guidance for landlords and tenants across England and Wales.
+      Whether you're managing a property, signing your first lease, or navigating a dispute,
+      we provide straightforward explanations, templates, and tools to help you make confident decisions.
+    </p>
+  </main>
+
+</div>
 
 </body>
 </html>
