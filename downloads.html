@@ -1,77 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Downloads - Property Toolkit</title>
-  <style>
-    body {
-      display: flex;
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #e8f1ff;
-    }
-    .sidebar {
-      width: 220px;
-      background: #2367d1;
-      color: #fff;
-      height: 100vh;
-      padding: 20px;
-      position: fixed;
-      left: 0;
-      top: 0;
-    }
-    .sidebar a {
-      display: block;
-      color: #fff;
-      padding: 10px 0;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .sidebar a:hover {
-      text-decoration: underline;
-    }
-    .content {
-      margin-left: 240px;
-      padding: 20px;
-      text-align: center;
-    }
-    .logo {
-      width: 300px;
-      margin-bottom: 20px;
-    }
-    a.download-link {
-      display: inline-block;
-      margin-top: 20px;
-      background: #2367d1;
-      color: white;
-      padding: 12px 20px;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-    }
-    a.download-link:hover {
-      background: #1c53a8;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <div class="sidebar">
-    <h2>Menu</h2>
-    <a href="index.html">Home</a>
-    <a href="landlord.html">Landlord</a>
-    <a href="tenant.html">Tenant</a>
-    <a href="downloads.html">Downloads</a>
-  </div>
-
+  <div id="sidebar"></div>
   <div class="content">
     <img src="logo.png" class="logo" alt="Logo" />
     <h1>Downloads</h1>
-    <p>We offer a comprehensive and growing library of useful templates for simple agreements that experienced landlords and tenants may wish to use themselves. You’ll also find clear, practical tips for navigating more complex documents—helping you feel informed and confident when discussing matters with your property advisers.</p>
-
-    <a class="download-link" href="heads_of_terms.docx" download>Download Heads of Terms</a>
+    <p>We offer a comprehensive collection of simple templates for common agreements and guidance for more complex documents.</p>
+    <a href="heads_of_terms.docx" download>Download Heads of Terms</a>
   </div>
-
+  <script>
+    fetch('sidebar.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('sidebar').innerHTML = data)
+      .catch(err => console.error('Could not load sidebar:', err));
+  </script>
 </body>
 </html>

@@ -1,74 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us - Landlord and Tenant</title>
-  <style>
-    body {
-      display: flex;
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f8ff;
-    }
-
-    /* Sidebar */
-    .sidebar {
-      width: 220px;
-      background: #1e63d5;
-      color: #fff;
-      height: 100vh;
-      padding: 20px;
-      position: fixed;
-      left: 0;
-      top: 0;
-    }
-
-    .sidebar h2 {
-      margin-top: 0;
-    }
-
-    .sidebar a {
-      display: block;
-      color: #fff;
-      padding: 10px 0;
-      text-decoration: none;
-      font-size: 16px;
-    }
-
-    .sidebar a:hover {
-      text-decoration: underline;
-    }
-
-    /* Main content */
-    .content {
-      margin-left: 240px;
-      padding: 20px;
-      text-align: center;
-    }
-
-    .logo {
-      width: 260px;
-      display: block;
-      margin: 0 auto 20px auto;
-    }
-
-    .text-box {
-      max-width: 800px;
-      margin: 20px auto;
-      background: white;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      text-align: left;
-      line-height: 1.6;
-      font-size: 18px;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Property Toolkit</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-  <div class="sidebar">
-    <h2>Menu</h2>
-    <
+  <div id="sidebar"></div>
+  <div class="content">
+    <img src="logo.png" class="logo" alt="Logo" />
+    <h1>About Us</h1>
+    <p>Landlord and Tenant is founded by an RICS Chartered Surveyor with 10 years of property experience, including 6 years post-qualification. Guidance is provided across retail, industrial, office, adult social care, education, and health sectors.</p>
+    
+  </div>
+  <script>
+    fetch('sidebar.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('sidebar').innerHTML = data)
+      .catch(err => console.error('Could not load sidebar:', err));
+  </script>
+</body>
+</html>
