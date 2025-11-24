@@ -2,96 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Downloads - Landlord and Tenant Adviser</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Downloads - Property Toolkit</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 700px;
-      margin: 40px auto;
-      padding: 0 20px;
-      color: #003366;
-      background: #f9faff;
+    body { margin:0; font-family: Arial, sans-serif; display:flex; }
+    .sidebar {
+      width:220px; background:#1a1a1a; color:#fff;
+      height:100vh; padding:20px; position:fixed; left:0; top:0;
     }
-    nav {
-      background-color: #003366;
-      padding: 10px 20px;
-      margin-bottom: 30px;
-      text-align: center;
-    }
-    nav a {
-      color: #ffffff;
-      margin-right: 20px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:last-child {
-      margin-right: 0;
-    }
-    .logo {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    .logo img {
-      max-height: 120px;
-    }
-    h1, h2 {
-      color: #0055aa;
-    }
-    a {
-      color: #004080;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    ul {
-      list-style-type: disc;
-      padding-left: 20px;
-    }
-    p {
-      line-height: 1.5;
-    }
+    .sidebar a { display:block; color:#fff; padding:10px 0; text-decoration:none; }
+    .sidebar a:hover { text-decoration:underline; }
+    .content { margin-left:240px; padding:20px; text-align:center; }
+    .logo { width:260px; display:block; margin:0 auto 20px auto; }
+    a.download-link { display:block; margin-top:20px; font-size:18px; }
   </style>
 </head>
 <body>
 
-  <div class="logo">
-    <img src="logo.png" alt="Landlord and Tenant Logo" />
+  <div class="sidebar">
+    <h2>Menu</h2>
+    <a href="index.html">Home</a>
+    <a href="landlord.html">Landlord</a>
+    <a href="tenant.html">Tenant</a>
+    <a href="downloads.html">Downloads</a>
   </div>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="downloads.html">Downloads</a>
-    <a href="landlords.html">Landlords</a>
-    <a href="tenants.html">Tenants</a>
-  </nav>
+  <div class="content">
+    <img src="logo.png" class="logo" alt="Logo">
+    <h1>Downloads</h1>
 
-  <h1>Useful Downloads</h1>
-  <p>
-    Welcome to our growing depository of practical resources. Here, you'll find a comprehensive and ever-expanding collection of templates and guidance notes designed to help landlords and tenants in England and Wales.
-  </p>
-  <p>
-    We offer straightforward templates for common agreements that experienced landlords and tenants may wish to use themselves. You’ll also find helpful advice and pointers for navigating more complex situations — so you can have informed, focused conversations with your property advisers when professional support is needed.
-  </p>
-  <p>
-    All documents are free to download and designed to support confident decision-making in commercial and residential lettings.
-  </p>
+    <p>
+      We offer a comprehensive and ever-expanding collection of simple templates for common agreements that experienced landlords and tenants may wish to use themselves.<br><br>
+      You will also find clear guidance and tips for more complex documents—helping you feel informed and confident when speaking with your professional advisers.
+    </p>
 
-  <h2>Available Templates</h2>
-  <ul>
-    <li>
-      <a href="Heads_of_Terms_Template.pdf" download>
-        Download Heads of Terms Template (PDF)
-      </a>
-    </li>
-    <li>
-      <a href="Heads_of_Terms_Template.docx" download>
-        Download Heads of Terms Template (Word)
-      </a>
-    </li>
-  </ul>
+    <a class="download-link" href="heads_of_terms.docx" download>Download Heads of Terms</a>
+  </div>
 
 </body>
 </html>
